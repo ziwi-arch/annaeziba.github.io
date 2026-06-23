@@ -266,6 +266,8 @@ section:nth-child(even) { background: var(--white); }
 /* ─────────────────────────────────────────
    INFO  — pure type list
 ───────────────────────────────────────── */
+#info h2 { margin-bottom: 1rem; }
+
 .info-list {
   display: flex;
   flex-direction: column;
