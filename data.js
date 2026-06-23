@@ -58,6 +58,7 @@ const data = {
     offrirBtn:   "Offrir",
 
     aboutTitle:  "Les mariés",
+    aboutSub:    "Clique sur la photo pour une surprise",
     about:       "On a hâte de pouvoir fêter notre mariage avec toi !",
   },
 
@@ -112,11 +113,12 @@ const data = {
     offrirBtn:   "Offrire",
 
     aboutTitle:  "Gli sposi",
+    aboutSub:    "Clicca sulle foto per una sorpresa",
     about:       "Non vediamo l'ora di festeggiare il nostro matrimonio con te!",
   },
 
   gifts: [
-    { name: "Viaggio di nozze in Cina",                                                                     nameFr: "Voyage de noces en Chine",                                                                        price: 1200, icon: "✈️", photo: "photos-liste/voyage.png" },
+    { name: "Viaggio di nozze in Cina",                                                                     nameFr: "Voyage de noces en Chine",                                                                        price: 1200, icon: "✈️", photo: "photos-liste/voyage.png", hidePrice: true },
     { name: "Giradischi e vinili - Per ascoltare le nostre canzoni preferite",                              nameFr: "Tourne-disque et vinyles - Pour écouter nos chansons préférées",                                  price: 300,  icon: "☕", photo: "photos-liste/vinile.png" },
     { name: "Proiettore - Per guardare insieme i nostri film preferiti e le partite del Milan",             nameFr: "Projecteur - Pour regarder ensemble nos films préférés et les matchs du Milan",                   price: 600,  icon: "🎁", photo: "photos-liste/videoproj.png" },
     { name: "Caraffa GluGlu - Per idratarsi con simpatia",                                                  nameFr: "Carafe GluGlu - Pour s'hydrater avec style",                                                      price: 100,  icon: "🕯️", photo: "photos-liste/caraffa.png" },

@@ -68,10 +68,8 @@ function render() {
   document.getElementById('venueMap').href         = data.venueMap;
 
   // Stay
-  document.getElementById('stayTitle').innerText   = t.stayTitle;
   document.getElementById('howToGet').innerText    = t.howToGet;
   document.getElementById('trenordLink').innerText = t.trenord;
-  renderHotels(t);
   renderTravel(t);
 
   // Gifts
@@ -80,6 +78,7 @@ function render() {
 
   // About
   document.getElementById('aboutTitle').innerText = t.aboutTitle;
+  document.getElementById('aboutSub').innerText   = t.aboutSub;
   document.getElementById('aboutText').innerText  = t.about;
 
   // Footer
@@ -118,28 +117,6 @@ function renderTravel(t) {
   });
 }
 
-/* ── Hotel card component ────────────────── */
-function HotelCard(h, t) {
-  const el = document.createElement('div');
-  el.className = 'hotel-card';
-  el.innerHTML = `
-    <span class="hotel-card__name">${h.name}</span>
-    <span class="hotel-card__location">${h.location}</span>
-    <span class="hotel-card__price">${h.price} € / nuit</span>
-    <div class="hotel-card__links">
-      <a class="hotel-card__link" href="${h.website}" target="_blank" rel="noopener">${t.stayWebLink}</a>
-      <a class="hotel-card__link" href="${h.map}"     target="_blank" rel="noopener">${t.stayMapLink}</a>
-    </div>
-  `;
-  return el;
-}
-
-/* ── Hotels ─────────────────────────────── */
-function renderHotels(t) {
-  const c = document.getElementById('hotelList');
-  c.innerHTML = '';
-  data.hotels.forEach((h) => c.appendChild(HotelCard(h, t)));
-}
 
 /* ── Gift card component ─────────────────── */
 function GiftCard(g) {
@@ -148,7 +125,7 @@ function GiftCard(g) {
   el.innerHTML = `
     <div class="gift-slide__card">
       <span class="gift-card__name">${lang === 'fr' && g.nameFr ? g.nameFr : g.name}</span>
-      <span class="gift-card__price">${g.price} €</span>
+      ${g.hidePrice ? '' : `<span class="gift-card__price">${g.price} €</span>`}
     </div>
     <div class="gift-slide__photo" style="background-image:url('${g.photo}')"></div>
   `;
@@ -217,6 +194,11 @@ function renderGifts() {
       d.classList.toggle('active', i === idx)
     );
   }, { passive: true });
+
+  const wrap = document.querySelector('.gift-carousel-wrap');
+  c.querySelectorAll('.gift-slide__photo').forEach(photo => {
+    photo.addEventListener('click', () => wrap.classList.toggle('arrows-hidden'));
+  });
 }
 
 function buyGift(i) {
