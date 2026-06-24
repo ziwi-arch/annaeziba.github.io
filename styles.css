@@ -915,7 +915,7 @@ footer span {
 .timeline-song iframe {
     width: 100%;
     height: auto;
-    max-height: 152px;
+    max-height: 80px;
 }
 .timeline-wrapper {
   position: relative;
