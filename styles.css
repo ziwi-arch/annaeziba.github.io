@@ -909,7 +909,7 @@ footer span {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 180px;  /* Adjust based on your needs */
+    min-height: fit-content;
 }
 
 .timeline-song iframe {
@@ -998,94 +998,39 @@ footer span {
 
   color: var(--gold);
 
-  margin-bottom: 6px;
+  font-weight: 600;
+
+  margin-bottom: 12px;
 }
 
 .gift-iban-value {
 
-  font-size: .9rem;
+  font-size: 1rem;
+
+  font-weight: 300;
 
   color: var(--ink);
+
+  letter-spacing: .02em;
+
+  margin-bottom: 6px;
+
+  font-family: 'Courier New', monospace;
 
   word-break: break-word;
 }
 
-.gift-intro {
+.gift-iban-bic {
 
-  max-width: 760px;
+  font-size: .75rem;
 
-  margin:
-    10px auto
-    30px;
+  font-weight: 300;
 
-  text-align: center;
+  color: var(--ink-lt);
 
-  color: var(--ink);
-}
+  letter-spacing: .06em;
 
-.gift-intro p {
+  text-transform: uppercase;
 
-  margin: 0 0 14px;
-
-  line-height: 1.8;
-
-  font-size: .98rem;
-
-  opacity: .92;
-}
-
-.gift-intro p:last-child {
-  margin-bottom: 0;
-}
-
-@media (max-width: 768px) {
-
-  .timeline-item {
-    flex: 0 0 82vw;
-  }
-
-  .timeline-photo img {
-    height: 420px;
-  }
-
-  .gift-iban-card {
-
-    width: 100%;
-
-    max-width: 320px;
-
-    margin: auto;
-
-  }
-
-  .gift-slide {
-
-    grid-template-rows:
-      auto
-      340px;
-
-    max-width: 92vw;
-
-  }
-
-  .nav-menu {
-
-    overflow-x: auto;
-
-    white-space: nowrap;
-
-    gap: 18px;
-  
-  }
-
-}
-@media (max-width: 768px) {
-  .gift-slide {
-    grid-template-rows: auto 260px;
-  }
-
-  .gift-slide__photo {
-    background-size: contain;
-    background-repeat: no-repeat;
-  }
+  font-family: 'Courier New', monospace;
 }
