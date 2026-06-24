@@ -890,6 +890,10 @@ footer span {
   opacity: 1;
 }
 
+.timeline-photo:hover .timeline-song {
+  opacity: 1;
+}
+
 .timeline-song {
     position: absolute;
     top: 0;
