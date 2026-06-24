@@ -905,9 +905,18 @@ footer span {
     padding: 12px;
     opacity: 0;
     transition: opacity .2s ease;
-    z-index: 2;  
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 180px;  /* Adjust based on your needs */
 }
 
+.timeline-song iframe {
+    width: 100%;
+    height: auto;
+    max-height: 152px;
+}
 .timeline-wrapper {
   position: relative;
 
